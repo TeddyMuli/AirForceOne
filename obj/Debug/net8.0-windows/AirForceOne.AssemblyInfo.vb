@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("AirForceOne"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8610b095cd4e7b4ede81d30790a6f84a19126a6b"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("AirForceOne"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("AirForceOne"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
