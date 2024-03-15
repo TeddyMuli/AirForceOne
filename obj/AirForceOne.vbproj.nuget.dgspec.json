@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\CODE\\AirForceOne\\AirForceOne.vbproj": {}
+    "C:\\Users\\Admin\\Desktop\\Coding\\Visual Basic\\AirForceOne\\AirForceOne.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\CODE\\AirForceOne\\AirForceOne.vbproj": {
+    "C:\\Users\\Admin\\Desktop\\Coding\\Visual Basic\\AirForceOne\\AirForceOne.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\CODE\\AirForceOne\\AirForceOne.vbproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Coding\\Visual Basic\\AirForceOne\\AirForceOne.vbproj",
         "projectName": "AirForceOne",
-        "projectPath": "C:\\Users\\user\\Documents\\CODE\\AirForceOne\\AirForceOne.vbproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\CODE\\AirForceOne\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Coding\\Visual Basic\\AirForceOne\\AirForceOne.vbproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Coding\\Visual Basic\\AirForceOne\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,6 +44,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
