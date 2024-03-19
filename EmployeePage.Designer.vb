@@ -22,6 +22,7 @@ Partial Class frmEmployeepage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmployeepage))
         btnAddEmployee = New Button()
         btnAddFlight = New Button()
         btnLogout = New Button()
@@ -33,7 +34,7 @@ Partial Class frmEmployeepage
         btnAddEmployee.Location = New Point(337, 146)
         btnAddEmployee.Name = "btnAddEmployee"
         btnAddEmployee.Size = New Size(143, 32)
-        btnAddEmployee.TabIndex = 0
+        btnAddEmployee.TabIndex = 1
         btnAddEmployee.Text = "Add Employee"
         btnAddEmployee.UseVisualStyleBackColor = True
         ' 
@@ -42,7 +43,7 @@ Partial Class frmEmployeepage
         btnAddFlight.Location = New Point(337, 200)
         btnAddFlight.Name = "btnAddFlight"
         btnAddFlight.Size = New Size(143, 32)
-        btnAddFlight.TabIndex = 1
+        btnAddFlight.TabIndex = 2
         btnAddFlight.Text = "Add Flight"
         btnAddFlight.UseVisualStyleBackColor = True
         ' 
@@ -63,6 +64,7 @@ Partial Class frmEmployeepage
         Controls.Add(btnLogout)
         Controls.Add(btnAddFlight)
         Controls.Add(btnAddEmployee)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frmEmployeepage"
         Text = "Employee Page"
         ResumeLayout(False)

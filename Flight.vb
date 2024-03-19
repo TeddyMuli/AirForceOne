@@ -9,7 +9,7 @@ Public Class frmFlight
                 conn.Open()
 
                 ' Prepare the SQL INSERT statement
-                Dim sql As String = "INSERT INTO ""Flights"" (""FlightID"", ""To"", ""From"", ""Date"", ""PilotID"", ""First_Class_No"", ""First_Class_Price"",""Business_No"", ""Business_Price"", ""Economy_No"", ""Economy_Price"", ""Time"") VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7, @param8, @param9, @param10, @param11, @param12);"
+                Dim sql As String = "INSERT INTO ""Flights"" (""FlightID"", ""To"", ""From"", ""Date"", ""PilotID"", ""First_Class_No"", ""First_Class_Price"",""Business_No"", ""Business_Price"", ""Economy_No"", ""Economy_Price"", ""Time"", ""First_Rem"", ""Business_Rem"",""Economy_Rem"") VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7, @param8, @param9, @param10, @param11, @param12, @param13, @param14, @param15);"
                 ' Create a command object with the SQL statement and connection
                 Using cmd As New NpgsqlCommand(sql, conn)
                     ' Add parameters to the command
@@ -25,6 +25,9 @@ Public Class frmFlight
                     cmd.Parameters.AddWithValue("@param10", nudEconomySeats.Value)
                     cmd.Parameters.AddWithValue("@param11", Integer.Parse(txtEconomyPrice.Text))
                     cmd.Parameters.AddWithValue("@param12", dtpTime.Value)
+                    cmd.Parameters.AddWithValue("@param13", nudFirstClassSeats.Value)
+                    cmd.Parameters.AddWithValue("@param14", nudBusinessSeats.Value)
+                    cmd.Parameters.AddWithValue("@param15", nudEconomySeats.Value)
 
                     ' Execute the command (INSERT)
                     Dim rowsAffected As Integer = cmd.ExecuteNonQuery()

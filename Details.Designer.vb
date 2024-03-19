@@ -22,6 +22,7 @@ Partial Class Details
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Details))
         Label1 = New Label()
         lblLoginStatus = New Label()
         nudEconomy = New NumericUpDown()
@@ -86,7 +87,7 @@ Partial Class Details
         nudBusiness.Location = New Point(292, 195)
         nudBusiness.Name = "nudBusiness"
         nudBusiness.Size = New Size(54, 23)
-        nudBusiness.TabIndex = 3
+        nudBusiness.TabIndex = 4
         nudBusiness.TextAlign = HorizontalAlignment.Center
         ' 
         ' nudFirst
@@ -95,7 +96,7 @@ Partial Class Details
         nudFirst.Location = New Point(457, 195)
         nudFirst.Name = "nudFirst"
         nudFirst.Size = New Size(54, 23)
-        nudFirst.TabIndex = 4
+        nudFirst.TabIndex = 6
         nudFirst.TextAlign = HorizontalAlignment.Center
         ' 
         ' lblPPSEconomy
@@ -217,7 +218,7 @@ Partial Class Details
         chbEconomy.Location = New Point(125, 164)
         chbEconomy.Name = "chbEconomy"
         chbEconomy.Size = New Size(76, 19)
-        chbEconomy.TabIndex = 20
+        chbEconomy.TabIndex = 1
         chbEconomy.Text = "Economy"
         chbEconomy.UseVisualStyleBackColor = True
         ' 
@@ -229,7 +230,7 @@ Partial Class Details
         chbBusiness.Location = New Point(292, 164)
         chbBusiness.Name = "chbBusiness"
         chbBusiness.Size = New Size(71, 19)
-        chbBusiness.TabIndex = 21
+        chbBusiness.TabIndex = 3
         chbBusiness.Text = "Business"
         chbBusiness.UseVisualStyleBackColor = True
         ' 
@@ -241,7 +242,7 @@ Partial Class Details
         chbFirst.Location = New Point(457, 164)
         chbFirst.Name = "chbFirst"
         chbFirst.Size = New Size(48, 19)
-        chbFirst.TabIndex = 22
+        chbFirst.TabIndex = 5
         chbFirst.Text = "First"
         chbFirst.UseVisualStyleBackColor = True
         ' 
@@ -250,7 +251,7 @@ Partial Class Details
         btnbook.Location = New Point(457, 403)
         btnbook.Name = "btnbook"
         btnbook.Size = New Size(98, 30)
-        btnbook.TabIndex = 23
+        btnbook.TabIndex = 7
         btnbook.Text = "Pay"
         btnbook.UseVisualStyleBackColor = True
         ' 
@@ -323,6 +324,7 @@ Partial Class Details
         Controls.Add(nudEconomy)
         Controls.Add(lblLoginStatus)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Details"
         StartPosition = FormStartPosition.CenterParent
         Text = "Details"

@@ -22,6 +22,7 @@ Partial Class frmFlight
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFlight))
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -132,7 +133,7 @@ Partial Class frmFlight
         btnResetFlight.Location = New Point(536, 401)
         btnResetFlight.Name = "btnResetFlight"
         btnResetFlight.Size = New Size(75, 23)
-        btnResetFlight.TabIndex = 18
+        btnResetFlight.TabIndex = 16
         btnResetFlight.Text = "Reset"
         btnResetFlight.UseVisualStyleBackColor = False
         ' 
@@ -143,7 +144,7 @@ Partial Class frmFlight
         btnSaveFlight.Location = New Point(632, 384)
         btnSaveFlight.Name = "btnSaveFlight"
         btnSaveFlight.Size = New Size(114, 54)
-        btnSaveFlight.TabIndex = 19
+        btnSaveFlight.TabIndex = 17
         btnSaveFlight.Text = "Save"
         btnSaveFlight.UseVisualStyleBackColor = False
         ' 
@@ -152,21 +153,21 @@ Partial Class frmFlight
         txtTo.Location = New Point(461, 130)
         txtTo.Name = "txtTo"
         txtTo.Size = New Size(123, 23)
-        txtTo.TabIndex = 20
+        txtTo.TabIndex = 3
         ' 
         ' txtFrom
         ' 
         txtFrom.Location = New Point(197, 130)
         txtFrom.Name = "txtFrom"
         txtFrom.Size = New Size(123, 23)
-        txtFrom.TabIndex = 23
+        txtFrom.TabIndex = 2
         ' 
         ' txtFlightNumber
         ' 
         txtFlightNumber.Location = New Point(197, 90)
         txtFlightNumber.Name = "txtFlightNumber"
         txtFlightNumber.Size = New Size(123, 23)
-        txtFlightNumber.TabIndex = 27
+        txtFlightNumber.TabIndex = 1
         ' 
         ' lblAddAFlight
         ' 
@@ -184,7 +185,7 @@ Partial Class frmFlight
         cmbPilotID.Location = New Point(197, 207)
         cmbPilotID.Name = "cmbPilotID"
         cmbPilotID.Size = New Size(175, 23)
-        cmbPilotID.TabIndex = 48
+        cmbPilotID.TabIndex = 6
         ' 
         ' dtpFlight
         ' 
@@ -194,7 +195,7 @@ Partial Class frmFlight
         dtpFlight.MinDate = New Date(2024, 3, 7, 0, 0, 0, 0)
         dtpFlight.Name = "dtpFlight"
         dtpFlight.Size = New Size(123, 23)
-        dtpFlight.TabIndex = 49
+        dtpFlight.TabIndex = 4
         ' 
         ' txtEconomyPrice
         ' 
@@ -202,7 +203,7 @@ Partial Class frmFlight
         txtEconomyPrice.Location = New Point(197, 333)
         txtEconomyPrice.Name = "txtEconomyPrice"
         txtEconomyPrice.Size = New Size(105, 23)
-        txtEconomyPrice.TabIndex = 51
+        txtEconomyPrice.TabIndex = 9
         txtEconomyPrice.Text = "0"
         ' 
         ' txtBusinessPrice
@@ -211,7 +212,7 @@ Partial Class frmFlight
         txtBusinessPrice.Location = New Point(354, 333)
         txtBusinessPrice.Name = "txtBusinessPrice"
         txtBusinessPrice.Size = New Size(105, 23)
-        txtBusinessPrice.TabIndex = 52
+        txtBusinessPrice.TabIndex = 12
         txtBusinessPrice.Text = " 0"
         ' 
         ' txtFirstClassPrice
@@ -220,7 +221,7 @@ Partial Class frmFlight
         txtFirstClassPrice.Location = New Point(506, 333)
         txtFirstClassPrice.Name = "txtFirstClassPrice"
         txtFirstClassPrice.Size = New Size(105, 23)
-        txtFirstClassPrice.TabIndex = 53
+        txtFirstClassPrice.TabIndex = 15
         txtFirstClassPrice.Text = "0"
         ' 
         ' Label4
@@ -239,7 +240,7 @@ Partial Class frmFlight
         chkFirstClass.Location = New Point(506, 255)
         chkFirstClass.Name = "chkFirstClass"
         chkFirstClass.Size = New Size(78, 19)
-        chkFirstClass.TabIndex = 55
+        chkFirstClass.TabIndex = 13
         chkFirstClass.Text = "First Class"
         chkFirstClass.UseVisualStyleBackColor = True
         ' 
@@ -249,7 +250,7 @@ Partial Class frmFlight
         chkEconomy.Location = New Point(197, 255)
         chkEconomy.Name = "chkEconomy"
         chkEconomy.Size = New Size(106, 19)
-        chkEconomy.TabIndex = 56
+        chkEconomy.TabIndex = 7
         chkEconomy.Text = "Economy Class"
         chkEconomy.UseVisualStyleBackColor = True
         ' 
@@ -259,7 +260,7 @@ Partial Class frmFlight
         chkBusiness.Location = New Point(354, 255)
         chkBusiness.Name = "chkBusiness"
         chkBusiness.Size = New Size(101, 19)
-        chkBusiness.TabIndex = 57
+        chkBusiness.TabIndex = 10
         chkBusiness.Text = "Business Class"
         chkBusiness.UseVisualStyleBackColor = True
         ' 
@@ -269,7 +270,7 @@ Partial Class frmFlight
         nudEconomySeats.Location = New Point(197, 292)
         nudEconomySeats.Name = "nudEconomySeats"
         nudEconomySeats.Size = New Size(64, 23)
-        nudEconomySeats.TabIndex = 58
+        nudEconomySeats.TabIndex = 8
         ' 
         ' nudFirstClassSeats
         ' 
@@ -277,7 +278,7 @@ Partial Class frmFlight
         nudFirstClassSeats.Location = New Point(506, 289)
         nudFirstClassSeats.Name = "nudFirstClassSeats"
         nudFirstClassSeats.Size = New Size(64, 23)
-        nudFirstClassSeats.TabIndex = 59
+        nudFirstClassSeats.TabIndex = 14
         ' 
         ' nudBusinessSeats
         ' 
@@ -285,7 +286,7 @@ Partial Class frmFlight
         nudBusinessSeats.Location = New Point(354, 289)
         nudBusinessSeats.Name = "nudBusinessSeats"
         nudBusinessSeats.Size = New Size(64, 23)
-        nudBusinessSeats.TabIndex = 60
+        nudBusinessSeats.TabIndex = 11
         ' 
         ' dtpTime
         ' 
@@ -294,7 +295,7 @@ Partial Class frmFlight
         dtpTime.Name = "dtpTime"
         dtpTime.ShowUpDown = True
         dtpTime.Size = New Size(123, 23)
-        dtpTime.TabIndex = 62
+        dtpTime.TabIndex = 5
         ' 
         ' Label5
         ' 
@@ -360,6 +361,7 @@ Partial Class frmFlight
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frmFlight"
         Text = "Add Flight"
         CType(nudEconomySeats, ComponentModel.ISupportInitialize).EndInit()

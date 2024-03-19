@@ -22,6 +22,7 @@ Partial Class frmEmployees
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmployees))
         txtEmployeeIDNumber = New TextBox()
         txtEmployeePhoneNumber = New TextBox()
         txtCreateEmployeePassword = New TextBox()
@@ -51,7 +52,7 @@ Partial Class frmEmployees
         txtEmployeeIDNumber.Location = New Point(181, 73)
         txtEmployeeIDNumber.Name = "txtEmployeeIDNumber"
         txtEmployeeIDNumber.Size = New Size(123, 27)
-        txtEmployeeIDNumber.TabIndex = 83
+        txtEmployeeIDNumber.TabIndex = 1
         ' 
         ' txtEmployeePhoneNumber
         ' 
@@ -59,7 +60,7 @@ Partial Class frmEmployees
         txtEmployeePhoneNumber.Location = New Point(181, 163)
         txtEmployeePhoneNumber.Name = "txtEmployeePhoneNumber"
         txtEmployeePhoneNumber.Size = New Size(123, 27)
-        txtEmployeePhoneNumber.TabIndex = 82
+        txtEmployeePhoneNumber.TabIndex = 4
         ' 
         ' txtCreateEmployeePassword
         ' 
@@ -67,7 +68,7 @@ Partial Class frmEmployees
         txtCreateEmployeePassword.Location = New Point(40, 307)
         txtCreateEmployeePassword.Name = "txtCreateEmployeePassword"
         txtCreateEmployeePassword.Size = New Size(195, 27)
-        txtCreateEmployeePassword.TabIndex = 81
+        txtCreateEmployeePassword.TabIndex = 7
         ' 
         ' txtCreatePassword
         ' 
@@ -75,7 +76,7 @@ Partial Class frmEmployees
         txtCreatePassword.Location = New Point(40, 241)
         txtCreatePassword.Name = "txtCreatePassword"
         txtCreatePassword.Size = New Size(195, 27)
-        txtCreatePassword.TabIndex = 80
+        txtCreatePassword.TabIndex = 6
         ' 
         ' txtEmployeeLastName
         ' 
@@ -83,7 +84,7 @@ Partial Class frmEmployees
         txtEmployeeLastName.Location = New Point(449, 119)
         txtEmployeeLastName.Name = "txtEmployeeLastName"
         txtEmployeeLastName.Size = New Size(123, 27)
-        txtEmployeeLastName.TabIndex = 79
+        txtEmployeeLastName.TabIndex = 3
         ' 
         ' txtEmployeeFirstName
         ' 
@@ -91,7 +92,7 @@ Partial Class frmEmployees
         txtEmployeeFirstName.Location = New Point(181, 119)
         txtEmployeeFirstName.Name = "txtEmployeeFirstName"
         txtEmployeeFirstName.Size = New Size(123, 27)
-        txtEmployeeFirstName.TabIndex = 77
+        txtEmployeeFirstName.TabIndex = 2
         ' 
         ' btnSaveNewEmployee
         ' 
@@ -101,7 +102,7 @@ Partial Class frmEmployees
         btnSaveNewEmployee.Location = New Point(604, 345)
         btnSaveNewEmployee.Name = "btnSaveNewEmployee"
         btnSaveNewEmployee.Size = New Size(114, 54)
-        btnSaveNewEmployee.TabIndex = 76
+        btnSaveNewEmployee.TabIndex = 10
         btnSaveNewEmployee.Text = "Save"
         btnSaveNewEmployee.UseVisualStyleBackColor = False
         ' 
@@ -111,7 +112,7 @@ Partial Class frmEmployees
         btnResetEmployees.Location = New Point(491, 362)
         btnResetEmployees.Name = "btnResetEmployees"
         btnResetEmployees.Size = New Size(75, 23)
-        btnResetEmployees.TabIndex = 75
+        btnResetEmployees.TabIndex = 9
         btnResetEmployees.Text = "Reset"
         btnResetEmployees.UseVisualStyleBackColor = False
         ' 
@@ -202,7 +203,7 @@ Partial Class frmEmployees
         cmbCategory.Location = New Point(449, 163)
         cmbCategory.Name = "cmbCategory"
         cmbCategory.Size = New Size(146, 23)
-        cmbCategory.TabIndex = 85
+        cmbCategory.TabIndex = 5
         ' 
         ' chkTerms
         ' 
@@ -210,7 +211,7 @@ Partial Class frmEmployees
         chkTerms.Location = New Point(40, 362)
         chkTerms.Name = "chkTerms"
         chkTerms.Size = New Size(261, 19)
-        chkTerms.TabIndex = 86
+        chkTerms.TabIndex = 8
         chkTerms.Text = "I accept The Terms of Use and Privacy Policy."
         chkTerms.UseVisualStyleBackColor = True
         ' 
@@ -268,6 +269,7 @@ Partial Class frmEmployees
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(lblCreateAnAccount)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frmEmployees"
         Text = "Employees"
         ResumeLayout(False)

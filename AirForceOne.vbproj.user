@@ -28,6 +28,12 @@
     <Compile Update="Learningbooking.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Myflights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="selectseats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="theaterbooking.vb">
       <SubType>Form</SubType>
     </Compile>

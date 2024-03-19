@@ -54,7 +54,7 @@ Partial Class frmCustomerLogin
         txtLoginCustPassportNumber.Location = New Point(393, 94)
         txtLoginCustPassportNumber.Name = "txtLoginCustPassportNumber"
         txtLoginCustPassportNumber.Size = New Size(145, 27)
-        txtLoginCustPassportNumber.TabIndex = 151
+        txtLoginCustPassportNumber.TabIndex = 1
         ' 
         ' Label2
         ' 
@@ -72,16 +72,16 @@ Partial Class frmCustomerLogin
         txtLoginCustPassword.Location = New Point(393, 136)
         txtLoginCustPassword.Name = "txtLoginCustPassword"
         txtLoginCustPassword.Size = New Size(195, 27)
-        txtLoginCustPassword.TabIndex = 149
+        txtLoginCustPassword.TabIndex = 2
         ' 
         ' btnCustLogin
         ' 
         btnCustLogin.BackColor = SystemColors.ControlDark
-        btnCustLogin.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btnCustLogin.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnCustLogin.Location = New Point(329, 218)
         btnCustLogin.Name = "btnCustLogin"
         btnCustLogin.Size = New Size(114, 47)
-        btnCustLogin.TabIndex = 148
+        btnCustLogin.TabIndex = 4
         btnCustLogin.Text = "Login"
         btnCustLogin.UseVisualStyleBackColor = False
         ' 
@@ -91,7 +91,7 @@ Partial Class frmCustomerLogin
         btnResetEmployees.Location = New Point(350, 189)
         btnResetEmployees.Name = "btnResetEmployees"
         btnResetEmployees.Size = New Size(75, 23)
-        btnResetEmployees.TabIndex = 147
+        btnResetEmployees.TabIndex = 3
         btnResetEmployees.Text = "Reset"
         btnResetEmployees.UseVisualStyleBackColor = False
         ' 
@@ -108,7 +108,7 @@ Partial Class frmCustomerLogin
         ' lblCreateAnAccount
         ' 
         lblCreateAnAccount.AutoSize = True
-        lblCreateAnAccount.Font = New Font("Segoe UI Semilight", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0)
+        lblCreateAnAccount.Font = New Font("Segoe UI Semilight", 14.25F, FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         lblCreateAnAccount.Location = New Point(350, 37)
         lblCreateAnAccount.Name = "lblCreateAnAccount"
         lblCreateAnAccount.Size = New Size(57, 25)
@@ -120,7 +120,7 @@ Partial Class frmCustomerLogin
         btnAddCustomer.Location = New Point(399, 298)
         btnAddCustomer.Name = "btnAddCustomer"
         btnAddCustomer.Size = New Size(143, 27)
-        btnAddCustomer.TabIndex = 153
+        btnAddCustomer.TabIndex = 5
         btnAddCustomer.Text = "Create An Account"
         btnAddCustomer.UseVisualStyleBackColor = True
         ' 
@@ -129,7 +129,7 @@ Partial Class frmCustomerLogin
         btnEmployeeLogin.Location = New Point(688, 428)
         btnEmployeeLogin.Name = "btnEmployeeLogin"
         btnEmployeeLogin.Size = New Size(100, 26)
-        btnEmployeeLogin.TabIndex = 154
+        btnEmployeeLogin.TabIndex = 7
         btnEmployeeLogin.Text = "Employee Login"
         btnEmployeeLogin.UseVisualStyleBackColor = True
         ' 
@@ -166,7 +166,7 @@ Partial Class frmCustomerLogin
         Button1.Location = New Point(300, 346)
         Button1.Name = "Button1"
         Button1.Size = New Size(176, 46)
-        Button1.TabIndex = 157
+        Button1.TabIndex = 6
         Button1.Text = "Use Without Account"
         Button1.UseVisualStyleBackColor = True
         ' 

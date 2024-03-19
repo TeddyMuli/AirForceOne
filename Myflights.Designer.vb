@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmHomepage
+Partial Class Myflights
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,19 +24,19 @@ Partial Class frmHomepage
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHomepage))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Myflights))
         dgvFlights = New DataGridView()
         Book = New DataGridViewButtonColumn()
-        btnLogout = New Button()
-        Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        txtsearchfrom = New TextBox()
-        txtsearchto = New TextBox()
-        btnView = New Button()
-        dtpFlight = New DateTimePicker()
         Label5 = New Label()
+        dtpFlight = New DateTimePicker()
+        btnView = New Button()
+        txtsearchto = New TextBox()
+        txtsearchfrom = New TextBox()
+        Label4 = New Label()
+        Label3 = New Label()
+        Label2 = New Label()
+        Label1 = New Label()
+        btnLogout = New Button()
         CType(dgvFlights, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -69,114 +69,115 @@ Partial Class frmHomepage
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         dgvFlights.DefaultCellStyle = DataGridViewCellStyle2
-        dgvFlights.Location = New Point(104, 131)
+        dgvFlights.Location = New Point(12, 110)
         dgvFlights.Name = "dgvFlights"
         dgvFlights.ReadOnly = True
         dgvFlights.ShowEditingIcon = False
-        dgvFlights.Size = New Size(906, 335)
-        dgvFlights.TabIndex = 0
+        dgvFlights.Size = New Size(855, 335)
+        dgvFlights.TabIndex = 12
         ' 
         ' Book
         ' 
         Book.HeaderText = ""
         Book.Name = "Book"
         Book.ReadOnly = True
-        Book.Text = "Select"
+        Book.Text = "Cancel"
         Book.UseColumnTextForButtonValue = True
         Book.Width = 5
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.ForeColor = Color.IndianRed
+        Label5.Location = New Point(286, 92)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(0, 15)
+        Label5.TabIndex = 22
+        ' 
+        ' dtpFlight
+        ' 
+        dtpFlight.Format = DateTimePickerFormat.Custom
+        dtpFlight.Location = New Point(390, 59)
+        dtpFlight.Name = "dtpFlight"
+        dtpFlight.Size = New Size(100, 23)
+        dtpFlight.TabIndex = 3
+        ' 
+        ' btnView
+        ' 
+        btnView.Location = New Point(778, 37)
+        btnView.Name = "btnView"
+        btnView.Size = New Size(75, 26)
+        btnView.TabIndex = 5
+        btnView.Text = "Back"
+        btnView.UseVisualStyleBackColor = True
+        ' 
+        ' txtsearchto
+        ' 
+        txtsearchto.Location = New Point(37, 59)
+        txtsearchto.Name = "txtsearchto"
+        txtsearchto.Size = New Size(100, 23)
+        txtsearchto.TabIndex = 1
+        ' 
+        ' txtsearchfrom
+        ' 
+        txtsearchfrom.Location = New Point(214, 59)
+        txtsearchfrom.Name = "txtsearchfrom"
+        txtsearchfrom.Size = New Size(100, 23)
+        txtsearchfrom.TabIndex = 2
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(345, 67)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(31, 15)
+        Label4.TabIndex = 17
+        Label4.Text = "Date"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(12, 67)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(19, 15)
+        Label3.TabIndex = 16
+        Label3.Text = "To"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(169, 67)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(35, 15)
+        Label2.TabIndex = 15
+        Label2.Text = "From"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 13F, FontStyle.Underline)
+        Label1.Location = New Point(12, 27)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(64, 25)
+        Label1.TabIndex = 14
+        Label1.Text = "Search"
+        ' 
         ' btnLogout
         ' 
-        btnLogout.Location = New Point(870, 29)
+        btnLogout.Location = New Point(778, 8)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(75, 23)
         btnLogout.TabIndex = 4
         btnLogout.Text = "Logout"
         btnLogout.UseVisualStyleBackColor = True
         ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 13F, FontStyle.Underline)
-        Label1.Location = New Point(104, 48)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(64, 25)
-        Label1.TabIndex = 2
-        Label1.Text = "Search"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(261, 88)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(35, 15)
-        Label2.TabIndex = 3
-        Label2.Text = "From"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(104, 88)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(19, 15)
-        Label3.TabIndex = 4
-        Label3.Text = "To"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(437, 88)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(31, 15)
-        Label4.TabIndex = 5
-        Label4.Text = "Date"
-        ' 
-        ' txtsearchfrom
-        ' 
-        txtsearchfrom.Location = New Point(306, 80)
-        txtsearchfrom.Name = "txtsearchfrom"
-        txtsearchfrom.Size = New Size(100, 23)
-        txtsearchfrom.TabIndex = 2
-        ' 
-        ' txtsearchto
-        ' 
-        txtsearchto.Location = New Point(129, 80)
-        txtsearchto.Name = "txtsearchto"
-        txtsearchto.Size = New Size(100, 23)
-        txtsearchto.TabIndex = 1
-        ' 
-        ' btnView
-        ' 
-        btnView.Location = New Point(806, 58)
-        btnView.Name = "btnView"
-        btnView.Size = New Size(139, 30)
-        btnView.TabIndex = 5
-        btnView.Text = "View Booked Flights"
-        btnView.UseVisualStyleBackColor = True
-        ' 
-        ' dtpFlight
-        ' 
-        dtpFlight.Format = DateTimePickerFormat.Custom
-        dtpFlight.Location = New Point(482, 80)
-        dtpFlight.Name = "dtpFlight"
-        dtpFlight.Size = New Size(100, 23)
-        dtpFlight.TabIndex = 3
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.ForeColor = Color.IndianRed
-        Label5.Location = New Point(378, 113)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(0, 15)
-        Label5.TabIndex = 11
-        ' 
-        ' frmHomepage
+        ' Myflights
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1060, 485)
+        ClientSize = New Size(904, 450)
+        Controls.Add(dgvFlights)
         Controls.Add(Label5)
         Controls.Add(dtpFlight)
         Controls.Add(btnView)
@@ -187,25 +188,24 @@ Partial Class frmHomepage
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(btnLogout)
-        Controls.Add(dgvFlights)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Name = "frmHomepage"
-        Text = "Homepage"
+        Name = "Myflights"
+        Text = "Myflights"
         CType(dgvFlights, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents dgvFlights As DataGridView
-    Friend WithEvents Book As DataGridViewButtonColumn
-    Friend WithEvents btnLogout As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtsearchfrom As TextBox
-    Friend WithEvents txtsearchto As TextBox
-    Friend WithEvents btnView As Button
-    Friend WithEvents dtpFlight As DateTimePicker
     Friend WithEvents Label5 As Label
+    Friend WithEvents dtpFlight As DateTimePicker
+    Friend WithEvents btnView As Button
+    Friend WithEvents txtsearchto As TextBox
+    Friend WithEvents txtsearchfrom As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnLogout As Button
+    Friend WithEvents Book As DataGridViewButtonColumn
 End Class

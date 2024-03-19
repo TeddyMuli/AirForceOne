@@ -22,6 +22,7 @@ Partial Class frmEmployeeLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmployeeLogin))
         txtLoginEmployeeIDNumber = New TextBox()
         Label2 = New Label()
         txtLoginEmployeePassword = New TextBox()
@@ -40,7 +41,7 @@ Partial Class frmEmployeeLogin
         txtLoginEmployeeIDNumber.Location = New Point(411, 108)
         txtLoginEmployeeIDNumber.Name = "txtLoginEmployeeIDNumber"
         txtLoginEmployeeIDNumber.Size = New Size(123, 27)
-        txtLoginEmployeeIDNumber.TabIndex = 135
+        txtLoginEmployeeIDNumber.TabIndex = 1
         ' 
         ' Label2
         ' 
@@ -58,7 +59,7 @@ Partial Class frmEmployeeLogin
         txtLoginEmployeePassword.Location = New Point(411, 156)
         txtLoginEmployeePassword.Name = "txtLoginEmployeePassword"
         txtLoginEmployeePassword.Size = New Size(195, 27)
-        txtLoginEmployeePassword.TabIndex = 133
+        txtLoginEmployeePassword.TabIndex = 2
         ' 
         ' btnEmployeeLogin
         ' 
@@ -67,7 +68,7 @@ Partial Class frmEmployeeLogin
         btnEmployeeLogin.Location = New Point(336, 255)
         btnEmployeeLogin.Name = "btnEmployeeLogin"
         btnEmployeeLogin.Size = New Size(114, 54)
-        btnEmployeeLogin.TabIndex = 132
+        btnEmployeeLogin.TabIndex = 4
         btnEmployeeLogin.Text = "Login"
         btnEmployeeLogin.UseVisualStyleBackColor = False
         ' 
@@ -77,7 +78,7 @@ Partial Class frmEmployeeLogin
         btnResetEmployees.Location = New Point(357, 226)
         btnResetEmployees.Name = "btnResetEmployees"
         btnResetEmployees.Size = New Size(75, 23)
-        btnResetEmployees.TabIndex = 131
+        btnResetEmployees.TabIndex = 3
         btnResetEmployees.Text = "Reset"
         btnResetEmployees.UseVisualStyleBackColor = False
         ' 
@@ -124,7 +125,7 @@ Partial Class frmEmployeeLogin
         btnCustomerredirect.Location = New Point(688, 412)
         btnCustomerredirect.Name = "btnCustomerredirect"
         btnCustomerredirect.Size = New Size(100, 26)
-        btnCustomerredirect.TabIndex = 156
+        btnCustomerredirect.TabIndex = 5
         btnCustomerredirect.Text = "Customer Login"
         btnCustomerredirect.UseVisualStyleBackColor = True
         ' 
@@ -143,6 +144,7 @@ Partial Class frmEmployeeLogin
         Controls.Add(btnResetEmployees)
         Controls.Add(Label3)
         Controls.Add(lblCreateAnAccount)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frmEmployeeLogin"
         Text = "EmployeeLogin"
         ResumeLayout(False)

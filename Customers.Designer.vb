@@ -22,6 +22,7 @@ Partial Class frmAddCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddCustomer))
         lblCreateAnAccount = New Label()
         txtPassportNumber = New TextBox()
         txtPhoneNumber = New TextBox()
@@ -61,7 +62,7 @@ Partial Class frmAddCustomer
         txtPassportNumber.Location = New Point(176, 76)
         txtPassportNumber.Name = "txtPassportNumber"
         txtPassportNumber.Size = New Size(123, 27)
-        txtPassportNumber.TabIndex = 65
+        txtPassportNumber.TabIndex = 1
         ' 
         ' txtPhoneNumber
         ' 
@@ -69,7 +70,7 @@ Partial Class frmAddCustomer
         txtPhoneNumber.Location = New Point(176, 166)
         txtPhoneNumber.Name = "txtPhoneNumber"
         txtPhoneNumber.Size = New Size(123, 27)
-        txtPhoneNumber.TabIndex = 64
+        txtPhoneNumber.TabIndex = 4
         ' 
         ' txtDate
         ' 
@@ -77,7 +78,7 @@ Partial Class frmAddCustomer
         txtDate.Location = New Point(35, 244)
         txtDate.Name = "txtDate"
         txtDate.Size = New Size(195, 27)
-        txtDate.TabIndex = 63
+        txtDate.TabIndex = 6
         ' 
         ' txtCreatePassword
         ' 
@@ -86,7 +87,7 @@ Partial Class frmAddCustomer
         txtCreatePassword.Location = New Point(34, 310)
         txtCreatePassword.Name = "txtCreatePassword"
         txtCreatePassword.Size = New Size(195, 27)
-        txtCreatePassword.TabIndex = 62
+        txtCreatePassword.TabIndex = 7
         ' 
         ' txtLastName
         ' 
@@ -94,7 +95,7 @@ Partial Class frmAddCustomer
         txtLastName.Location = New Point(444, 122)
         txtLastName.Name = "txtLastName"
         txtLastName.Size = New Size(123, 27)
-        txtLastName.TabIndex = 61
+        txtLastName.TabIndex = 3
         ' 
         ' txtEmail
         ' 
@@ -102,7 +103,7 @@ Partial Class frmAddCustomer
         txtEmail.Location = New Point(444, 166)
         txtEmail.Name = "txtEmail"
         txtEmail.Size = New Size(180, 27)
-        txtEmail.TabIndex = 60
+        txtEmail.TabIndex = 5
         ' 
         ' txtFirstName
         ' 
@@ -110,7 +111,7 @@ Partial Class frmAddCustomer
         txtFirstName.Location = New Point(176, 122)
         txtFirstName.Name = "txtFirstName"
         txtFirstName.Size = New Size(123, 27)
-        txtFirstName.TabIndex = 58
+        txtFirstName.TabIndex = 2
         ' 
         ' btnSaveCreateCustomer
         ' 
@@ -120,7 +121,7 @@ Partial Class frmAddCustomer
         btnSaveCreateCustomer.Location = New Point(599, 348)
         btnSaveCreateCustomer.Name = "btnSaveCreateCustomer"
         btnSaveCreateCustomer.Size = New Size(114, 54)
-        btnSaveCreateCustomer.TabIndex = 57
+        btnSaveCreateCustomer.TabIndex = 10
         btnSaveCreateCustomer.Text = "Save"
         btnSaveCreateCustomer.UseVisualStyleBackColor = False
         ' 
@@ -130,7 +131,7 @@ Partial Class frmAddCustomer
         btnResetCustomer.Location = New Point(486, 365)
         btnResetCustomer.Name = "btnResetCustomer"
         btnResetCustomer.Size = New Size(75, 23)
-        btnResetCustomer.TabIndex = 56
+        btnResetCustomer.TabIndex = 9
         btnResetCustomer.Text = "Reset"
         btnResetCustomer.UseVisualStyleBackColor = False
         ' 
@@ -210,7 +211,7 @@ Partial Class frmAddCustomer
         chkTerms.Location = New Point(34, 369)
         chkTerms.Name = "chkTerms"
         chkTerms.Size = New Size(261, 19)
-        chkTerms.TabIndex = 87
+        chkTerms.TabIndex = 8
         chkTerms.Text = "I accept The Terms of Use and Privacy Policy."
         chkTerms.UseVisualStyleBackColor = True
         ' 
@@ -269,6 +270,7 @@ Partial Class frmAddCustomer
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(lblCreateAnAccount)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frmAddCustomer"
         Text = "Add Customer"
         ResumeLayout(False)

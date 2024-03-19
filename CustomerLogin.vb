@@ -28,6 +28,8 @@ Public Class frmCustomerLogin
                             LoginDetails.CustomerLoginID = row("Passport_No").ToString()
                         Next
                         Me.Hide()
+                        txtLoginCustPassportNumber.Text = ""
+                        txtLoginCustPassword.Text = ""
                         frmHomepage.Show()
                     Else
                         lblinfo.Text = "Wrong Passport Number and/or Password"
@@ -56,5 +58,10 @@ Public Class frmCustomerLogin
 
     Private Sub txtLoginCustPassportNumber_TextChanged(sender As Object, e As EventArgs) Handles txtLoginCustPassportNumber.TextChanged
         lblinfo.Text = ""
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        frmHomepage.Show()
     End Sub
 End Class

@@ -36,9 +36,9 @@ Public Class Details
                         ' Iterate through the rows in the DataTable
                         For Each row As DataRow In ds.Tables(0).Rows
                             ' Access data from each column using column name or index
-                            nudEconomy.Maximum = row("Economy_No")
-                            nudBusiness.Maximum = row("Business_No")
-                            nudFirst.Maximum = row("First_Class_No")
+                            nudEconomy.Maximum = row("Economy_Rem")
+                            nudBusiness.Maximum = row("Business_Rem")
+                            nudFirst.Maximum = row("First_Rem")
                             lblPPSEconomy.Text = row("Economy_Price")
                             lblPPSBusiness.Text = row("Business_Price")
                             lblPPSFirst.Text = row("First_Class_Price")
@@ -67,7 +67,7 @@ Public Class Details
                     dgvFlightSelected.DataSource = table
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Erroooooor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Using
     End Sub
@@ -124,7 +124,7 @@ Public Class Details
                 conn.Open()
 
                 ' Prepare the SQL INSERT statement
-                Dim sql As String = "INSERT INTO ""Bookings"" (""Passport_No"", ""FlightID"", ""FirstClassSeats"", ""BusinessSeats"", ""EconomySeats"", ""TotalCost"") VALUES (@param1, @param2, @param3, @param4, @param5, @param6);"
+                Dim sql As String = "INSERT INTO ""Bookings"" (""Passport_No"", ""Flight_ID"", ""FirstClassSeats"", ""BusinessSeats"", ""EconomySeats"", ""TotalCost"") VALUES (@param1, @param2, @param3, @param4, @param5, @param6);"
                 ' Create a command object with the SQL statement and connection
                 Using cmd As New NpgsqlCommand(sql, conn)
                     ' Add parameters to the command
@@ -132,7 +132,7 @@ Public Class Details
                     cmd.Parameters.AddWithValue("@param2", LoginDetails.FlightID)
                     cmd.Parameters.AddWithValue("@param3", nudFirst.Value)
                     cmd.Parameters.AddWithValue("@param4", nudBusiness.Value)
-                    cmd.Parameters.AddWithValue("@param5", nudBusiness.Value)
+                    cmd.Parameters.AddWithValue("@param5", nudEconomy.Value)
                     cmd.Parameters.AddWithValue("@param6", CType(lblTotal.Text, Integer))
 
                     ' Execute the command (INSERT)
@@ -149,7 +149,7 @@ Public Class Details
                                 Dim newBSN As Integer = nudBusiness.Maximum - nudBusiness.Value
                                 Dim newFSN As Integer = nudFirst.Maximum - nudFirst.Value
                                 ' Prepare the SQL INSERT statement
-                                Dim sql2 As String = $"UPDATE ""Flights"" SET ""First_Class_No"" = '{newFSN}', ""Business_No"" = '{newBSN}', ""Economy_No"" = '{newESN}' WHERE ""FlightID"" = '{LoginDetails.FlightID}'"
+                                Dim sql2 As String = $"UPDATE ""Flights"" SET ""First_Rem"" = '{newFSN}', ""Business_Rem"" = '{newBSN}', ""Economy_Rem"" = '{newESN}' WHERE ""FlightID"" = '{LoginDetails.FlightID}'"
                                 ' Create a command object with the SQL statement and connection
                                 Using cmd2 As New NpgsqlCommand(sql2, conn)
 
@@ -174,5 +174,9 @@ Public Class Details
                 MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Using
+    End Sub
+
+    Private Sub lblLoginStatus_Click(sender As Object, e As EventArgs) Handles Me.Closing
+        frmHomepage.Show()
     End Sub
 End Class
