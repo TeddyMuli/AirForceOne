@@ -1,7 +1,7 @@
 ﻿Imports Npgsql
 
 Public Class frmEmployeeLogin
-    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce Two;"
+    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce One;"
     Private Sub btnCustLogin_Click(sender As Object, e As EventArgs) Handles btnEmployeeLogin.Click
         Using conn As New NpgsqlConnection(connString)
             Try

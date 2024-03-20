@@ -1,6 +1,6 @@
 ﻿Imports Npgsql
 Public Class Details
-    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce Two;"
+    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce One;"
     Public Function Totalcost()
         LoginDetails.TotalCost = CType(lblCTBusiness.Text, Int64) + CType(lblCTEconomy.Text, Int64) + CType(lblCTFirst.Text, Int64)
         lblTotal.Text = LoginDetails.TotalCost

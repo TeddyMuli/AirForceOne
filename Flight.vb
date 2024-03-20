@@ -1,6 +1,6 @@
 ﻿Imports Npgsql
 Public Class frmFlight
-    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce Two;"
+    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce One;"
     Private Sub btnSaveFlight_Click(sender As Object, e As EventArgs) Handles btnSaveFlight.Click
 
         Using conn As New NpgsqlConnection(connString)

@@ -1,7 +1,7 @@
 ﻿Imports Npgsql
 
 Public Class theaterbooking
-    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce Two;"
+    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce One;"
     Dim availableIcon As New System.Drawing.Bitmap(My.Resources.Available)
     Dim selcetedIcon As New System.Drawing.Bitmap(My.Resources.Selected)
     Dim takenIcon As New System.Drawing.Bitmap(My.Resources.Taken)

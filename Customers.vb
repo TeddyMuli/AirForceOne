@@ -1,6 +1,6 @@
 ﻿Imports Npgsql
 Public Class frmAddCustomer
-    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce Two;"
+    Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce One;"
 
     Dim PassCreated As Boolean = False
 

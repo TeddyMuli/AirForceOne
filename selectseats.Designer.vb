@@ -32,15 +32,20 @@ Partial Class selectseats
         ' 
         ' TableLayoutPanel1
         ' 
-        TableLayoutPanel1.ColumnCount = 2
+        TableLayoutPanel1.AutoSize = True
+        TableLayoutPanel1.ColumnCount = 5
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Location = New Point(12, 255)
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.Location = New Point(12, 19)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Size = New Size(568, 75)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.Size = New Size(60, 0)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' TableLayoutPanel3
@@ -61,7 +66,7 @@ Partial Class selectseats
         TableLayoutPanel2.ColumnCount = 2
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Location = New Point(12, 358)
+        TableLayoutPanel2.Location = New Point(744, 244)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 2
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
@@ -74,7 +79,7 @@ Partial Class selectseats
         TableLayoutPanel4.ColumnCount = 2
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Location = New Point(12, 461)
+        TableLayoutPanel4.Location = New Point(744, 309)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
@@ -84,9 +89,9 @@ Partial Class selectseats
         ' 
         ' pnlPractice
         ' 
-        pnlPractice.Location = New Point(23, 19)
+        pnlPractice.Location = New Point(804, 19)
         pnlPractice.Name = "pnlPractice"
-        pnlPractice.Size = New Size(966, 208)
+        pnlPractice.Size = New Size(251, 208)
         pnlPractice.TabIndex = 3
         ' 
         ' pnlfinal
@@ -109,6 +114,7 @@ Partial Class selectseats
         Name = "selectseats"
         Text = "selectseats"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
