@@ -157,7 +157,7 @@ Public Class Details
 
                                     ' Check if the INSERT was successful
                                     If rowsAffected2 > 0 Then
-                                        MessageBox.Show("Flight updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                        Me.Close()
                                     Else
                                         MessageBox.Show("Failed to insert data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                     End If

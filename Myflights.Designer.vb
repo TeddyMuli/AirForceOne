@@ -27,6 +27,7 @@ Partial Class Myflights
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Myflights))
         dgvFlights = New DataGridView()
         Book = New DataGridViewButtonColumn()
+        Seat = New DataGridViewButtonColumn()
         Label5 = New Label()
         dtpFlight = New DateTimePicker()
         btnView = New Button()
@@ -60,7 +61,7 @@ Partial Class Myflights
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         dgvFlights.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvFlights.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvFlights.Columns.AddRange(New DataGridViewColumn() {Book})
+        dgvFlights.Columns.AddRange(New DataGridViewColumn() {Book, Seat})
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.White
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
@@ -73,7 +74,7 @@ Partial Class Myflights
         dgvFlights.Name = "dgvFlights"
         dgvFlights.ReadOnly = True
         dgvFlights.ShowEditingIcon = False
-        dgvFlights.Size = New Size(855, 335)
+        dgvFlights.Size = New Size(960, 335)
         dgvFlights.TabIndex = 12
         ' 
         ' Book
@@ -84,6 +85,15 @@ Partial Class Myflights
         Book.Text = "Cancel"
         Book.UseColumnTextForButtonValue = True
         Book.Width = 5
+        ' 
+        ' Seat
+        ' 
+        Seat.HeaderText = ""
+        Seat.Name = "Seat"
+        Seat.ReadOnly = True
+        Seat.Text = "Edit Seats"
+        Seat.UseColumnTextForButtonValue = True
+        Seat.Width = 5
         ' 
         ' Label5
         ' 
@@ -104,7 +114,7 @@ Partial Class Myflights
         ' 
         ' btnView
         ' 
-        btnView.Location = New Point(778, 37)
+        btnView.Location = New Point(897, 45)
         btnView.Name = "btnView"
         btnView.Size = New Size(75, 26)
         btnView.TabIndex = 5
@@ -164,7 +174,7 @@ Partial Class Myflights
         ' 
         ' btnLogout
         ' 
-        btnLogout.Location = New Point(778, 8)
+        btnLogout.Location = New Point(897, 16)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(75, 23)
         btnLogout.TabIndex = 4
@@ -176,7 +186,7 @@ Partial Class Myflights
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(904, 450)
+        ClientSize = New Size(1009, 450)
         Controls.Add(dgvFlights)
         Controls.Add(Label5)
         Controls.Add(dtpFlight)
@@ -208,4 +218,5 @@ Partial Class Myflights
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogout As Button
     Friend WithEvents Book As DataGridViewButtonColumn
+    Friend WithEvents Seat As DataGridViewButtonColumn
 End Class

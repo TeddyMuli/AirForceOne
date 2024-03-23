@@ -15,7 +15,7 @@ Public Class Myflights
                 conn.Open()
 
                 ' Prepare the SQL query
-                Dim sql As String = $"SELECT ""BookingID"",""First_Rem"", ""Business_Rem"", ""Economy_Rem"", ""FlightID"",""To"", ""From"", ""FirstClassSeats"",""BusinessSeats"",""EconomySeats"",""TotalCost"",""Payment_Status"" FROM ""Bookings"" INNER JOIN ""Flights"" ON ""Bookings"".""Flight_ID"" = ""Flights"".""FlightID"" WHERE ""Passport_No"" = '{LoginDetails.CustomerLoginID}'"
+                Dim sql As String = $"SELECT ""BookingID"",""First_Rem"", ""Business_Rem"", ""Economy_Rem"", ""FlightID"",""To"", ""From"", ""FirstClassSeats"",""BusinessSeats"",""EconomySeats"",""TotalCost"",""Payment_Status"", ""Date"" FROM ""Bookings"" INNER JOIN ""Flights"" ON ""Bookings"".""Flight_ID"" = ""Flights"".""FlightID"" WHERE ""Passport_No"" = '{LoginDetails.CustomerLoginID}'"
 
                 ' Create a data adapter
                 Using da As New NpgsqlDataAdapter(sql, conn)
@@ -37,25 +37,28 @@ Public Class Myflights
                         MessageBox.Show("No data found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                     conn.Close()
-                    dgvFlights.Columns("Book").DisplayIndex = 12
+                    dgvFlights.Columns("Seat").DisplayIndex = 13
+                    dgvFlights.Columns("Book").DisplayIndex = 14
+
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Erro0r: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Using
     End Sub
     Private Sub dgvflights_cellcontentclick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFlights.CellContentClick
         If e.ColumnIndex = dgvFlights.Columns("book").Index Then
+            LoginDetails.BookingID = dgvFlights.Rows(e.RowIndex).Cells(2).Value
             Using conn As New NpgsqlConnection(connString)
                 Try
                     ' Open the connection
                     conn.Open()
-                    Dim newFSN As Integer = dgvFlights.Rows(e.RowIndex).Cells(2).Value + dgvFlights.Rows(e.RowIndex).Cells(8).Value
-                    Dim newBSN As Integer = dgvFlights.Rows(e.RowIndex).Cells(3).Value + dgvFlights.Rows(e.RowIndex).Cells(9).Value
-                    Dim newESN As Integer = dgvFlights.Rows(e.RowIndex).Cells(4).Value + dgvFlights.Rows(e.RowIndex).Cells(10).Value
+                    Dim newFSN As Integer = dgvFlights.Rows(e.RowIndex).Cells(3).Value + dgvFlights.Rows(e.RowIndex).Cells(9).Value
+                    Dim newBSN As Integer = dgvFlights.Rows(e.RowIndex).Cells(4).Value + dgvFlights.Rows(e.RowIndex).Cells(10).Value
+                    Dim newESN As Integer = dgvFlights.Rows(e.RowIndex).Cells(5).Value + dgvFlights.Rows(e.RowIndex).Cells(11).Value
 
                     ' Prepare the SQL INSERT statement
-                    Dim sql As String = $"UPDATE ""Flights"" SET ""First_Rem"" = '{newFSN}', ""Business_Rem"" = '{newBSN}', ""Economy_Rem"" = '{newESN}' WHERE ""FlightID"" = '{LoginDetails.FlightID}';DELETE FROM ""Bookings"" WHERE ""BookingID"" = {dgvFlights.Rows(e.RowIndex).Cells(1).Value}"
+                    Dim sql As String = $"UPDATE ""Flights"" SET ""First_Rem"" = '{newFSN}', ""Business_Rem"" = '{newBSN}', ""Economy_Rem"" = '{newESN}' WHERE ""FlightID"" = '{LoginDetails.FlightID}';DELETE FROM ""Bookings"" WHERE ""BookingID"" = {LoginDetails.BookingID}"
                     ' Create a command object with the SQL statemen-t and connection
                     Using cmd As New NpgsqlCommand(sql, conn)
                         ' Add parameters to the command
@@ -76,9 +79,15 @@ Public Class Myflights
                     Homepage_Load(e, e)
                 Catch ex As Exception
 
-                    MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Erro00r: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             End Using
+        End If
+        If e.ColumnIndex = dgvFlights.Columns("Seat").Index Then
+            LoginDetails.BookingID = dgvFlights.Rows(e.RowIndex).Cells(2).Value
+            LoginDetails.FlightID = dgvFlights.Rows(e.RowIndex).Cells(6).Value
+            Me.Hide()
+            Seats.Show()
         End If
     End Sub
 
@@ -98,8 +107,9 @@ Public Class Myflights
 
                 ' Prepare the SQL query
                 Dim Pilots As New List(Of String)
-                Dim sql As String = $"SELECT ""FlightID"",""To"", ""From"", ""FirstClassSeats"",""BusinessSeats"",""EconomySeats"",""TotalCost"",""Payment_Status"" FROM ""Bookings"" INNER JOIN ""Flights"" ON ""Bookings"".""Flight_ID"" = ""Flights"".""FlightID"" WHERE ""Passport_No"" = 'A12345'"
-
+                'Dim sql As String = $"SELECT ""FlightID"",""To"", ""From"", ""FirstClassSeats"",""BusinessSeats"",""EconomySeats"",""TotalCost"",""Payment_Status"" FROM ""Bookings"" INNER JOIN ""Flights"" ON ""Bookings"".""Flight_ID"" = ""Flights"".""FlightID"" WHERE ""Passport_No"" = 'A12345'"
+                'Dim sql As String = $"SELECT ""Flight_ID"",""To"", ""From"", ""FirstClassSeats"",""BusinessSeats"",""EconomySeats"",""TotalCost"",""Payment_Status"" FROM ""Bookings"" WHERE ""Passport_No"" = '{LoginDetails.CustomerLoginID}' AND ""To"" ILIKE '{txtsearchto.Text}%' AND ""From"" ILIKE '{txtsearchfrom.Text}%' AND ""Date"" >= '{dtpFlight.Value}'"
+                Dim sql As String = $"SELECT ""BookingID"",""First_Rem"", ""Business_Rem"", ""Economy_Rem"", ""FlightID"",""To"", ""From"", ""FirstClassSeats"",""BusinessSeats"",""EconomySeats"",""TotalCost"",""Payment_Status"", ""Date"" FROM ""Bookings"" INNER JOIN ""Flights"" ON ""Bookings"".""Flight_ID"" = ""Flights"".""FlightID"" WHERE ""Passport_No"" = '{LoginDetails.CustomerLoginID}' AND ""To"" ILIKE '{txtsearchto.Text}%' AND ""From"" ILIKE '{txtsearchfrom.Text}%' AND ""Date"" >= '{dtpFlight.Value}'"
 
                 ' Create a data adapter
                 Using da As New NpgsqlDataAdapter(sql, conn)
@@ -111,23 +121,28 @@ Public Class Myflights
 
                     ' Check if any data was retrieved
                     If ds.Tables.Count > 0 AndAlso ds.Tables(0).Rows.Count > 0 Then
+                        dgvFlights.DataSource = ds.Tables(0)
+                        dgvFlights.Columns("BookingID").Visible = False
+                        dgvFlights.Columns("First_Rem").Visible = False
+                        dgvFlights.Columns("Business_Rem").Visible = False
+                        dgvFlights.Columns("Economy_Rem").Visible = False
                         Label5.Text = ""
                         dgvFlights.DataSource = ds.Tables(0)
                     Else
                         Label5.Text = "No Flights Available that meet your search criterea"
                     End If
                     conn.Close()
-                    dgvFlights.Columns("Book").DisplayIndex = 8
+                    dgvFlights.Columns("Seat").DisplayIndex = 13
+                    dgvFlights.Columns("Book").DisplayIndex = 14
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Erro000r: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Using
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
-        Me.Hide()
-        frmHomepage.Show()
+        Me.Close()
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Me.Closing

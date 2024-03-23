@@ -4,10 +4,10 @@ Public Class frmHomepage
     Dim connString As String = "Host=localhost;Port=5432;Username=postgres;Password=tonyturi;Database=Airforce One;"
 
     Private Sub Homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpFlight.MinDate = Now.Date
         dtpFlight.CustomFormat = "yyyy-MM-dd"
-        dtpFlight.Value = "2024-03-07"
+        dtpFlight.Value = Now.Date
         dtpFlight.MaxDate = "2030-12-31"
-        dtpFlight.MinDate = "2024 -03-06"
         Using conn As New NpgsqlConnection(connString)
             Try
                 ' Open the connection
@@ -15,7 +15,7 @@ Public Class frmHomepage
 
                 ' Prepare the SQL query
                 Dim Pilots As New List(Of String)
-                Dim sql As String = "SELECT ""FlightID"",""To"", ""From"", ""First_Class_Price"",""Business_Price"",""Economy_Price"",""Date"",""Time"" FROM ""Flights""" 'WHERE ""Date"" > CURRENT_DATE"
+                Dim sql As String = "SELECT ""FlightID"",""To"", ""From"", ""First_Class_Price"",""Business_Price"",""Economy_Price"",""Date"",""Time"" FROM ""Flights"" WHERE ""Date"" > CURRENT_DATE"
 
                 ' Create a data adapter
                 Using da As New NpgsqlDataAdapter(sql, conn)
@@ -103,4 +103,5 @@ Public Class frmHomepage
             Myflights.Show()
         End If
     End Sub
+
 End Class

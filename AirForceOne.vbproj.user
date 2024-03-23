@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="BusinessSeats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CustomerLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -16,6 +19,9 @@
     <Compile Update="Customers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FirstClassSeats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Flight.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -25,25 +31,13 @@
     <Compile Update="Homepage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learningbooking.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Myflights.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="selectseats.vb">
+    <Compile Update="EconomySeats.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="theaterbooking.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="tk1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="tk2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Welcome.vb">
+    <Compile Update="Seats.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
