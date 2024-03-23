@@ -37,8 +37,43 @@
     <Compile Update="theaterbooking.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="tk1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="tk2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Welcome.vb">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="CustomerLogin.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Customers.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Details.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EmployeeLogin.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EmployeePage.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Employees.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Flight.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Homepage.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Myflights.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
